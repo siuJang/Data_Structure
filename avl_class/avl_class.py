@@ -27,3 +27,15 @@ def levelOrder(self, root):
         print()
 
     return
+
+def rotate_right(self, y):
+    x = y.left
+    T2 = x.right
+
+    x.right = y
+    y.left = T2
+
+    y.height = 1 + max(self.get_height(y.left), self.get_height(y.right))
+    x.height = 1 + max(self.get_height(x.left), self.get_height(x.right))
+
+    return x

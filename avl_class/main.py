@@ -7,4 +7,5 @@ items = [43, 49, 84]
 for item in items:
     root = avl.insert(item)
 
+avl.inorder(root)
 avl.levelOrder(root)
